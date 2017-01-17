@@ -1,0 +1,32 @@
+
+<!-- You will attach an ng-model and an ng-submit to your forms (but might want to wait until the next tab, when you have your controllers and factory) -->
+<div ng-controller='showFriendIdController'>
+  <!-- <h1>Edit Friends!</h1> -->
+<ul class="nav navbar-nav">
+
+  <!-- {{question._id}} -->
+  <li><a href="#/">Home</a></li>
+  <li><a href="#/index">Logout</a></li>
+</ul>
+<br><br><br>
+<div class="container">
+  <div class="form-group">
+  <form class="form-horizontal">
+      <span>Questions: {{question.text}}</span><br>
+      <!-- <span>{{question._id}}</span> -->
+      <!-- <span>Here should show the question and its id</span> -->
+      <a href="#/question/{{question._id}}/new_answer">Answer this Question</a>
+  </form>
+</ul>
+  <ul ng-repeat = "answer in question.answers">
+
+      <li>Answered by: {{answer.user}}</li>
+      <li>Answer content: {{answer.text}} <p>Likes: {{answer.likes}}</p>
+        <button type="button" ng-click = "plusLike(answer._id, answer.likes)">Like?</button>
+      </li>
+      <!-- <li>{{answer._id}}</li> -->
+
+    </ul>
+</div>
+</div>
+</div>

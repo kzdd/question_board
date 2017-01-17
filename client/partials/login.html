@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Welcome to Question-A-Code</title>
+  </head>
+  <body>
+
+
+<div ng-controller = "friendsController">
+<div class="container">
+  <h3>Hello!<br/>Please enter your name to join and share your ideas!</h3>
+<form class="form-signin">
+
+		<label class="class="sr-only>User Name</label>
+    <input class="form-control" ng-model="newUser.name" placeholder="Your Name..."/><br>
+    <button class="btn btn-primary col-md-1 col-md-offset-5" ng-click="createUser()">Join</button>
+
+
+		<!-- <a href="#/dashboard"> --><!-- </a> -->
+  </form>
+	</div>
+  <br>{{error.message}}
+</div>
+
+
+
+
+  <!-- {{name}} {{4+5}} -->
+  <!-- <h2>Q and A</h2>
+  <form class="form-horizontal" role="form">
+    <div class="form-group">
+
+    </div>
+
+  </form>
+  <form ng-model = "newUser", ng-submit = "createUser()">
+    <input type="text" ng-model="newUser.name" value="">
+
+    <input type="submit" value="Enter">
+    </form>
+
+
+</div> -->
+</body>
+</html>

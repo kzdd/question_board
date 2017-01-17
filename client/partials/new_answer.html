@@ -1,0 +1,38 @@
+<!-- <div ng-controller = "friendsController"> -->
+
+<div ng-controller = "showFriendIdController">
+<ul class="nav navbar-nav">
+  <li><a href="#/edit/{{question._id}}">Back to Question</a></li>
+
+
+  <li><a href="#/">Home</a></li>
+  <li><a href="#/index">Logout</a></li>
+</ul>
+<br>
+
+
+
+<div class="container">
+<form class="form-inline" >
+    <h2><span>Question: {{question.text}}</span></h2>
+    <!-- <h5><span>Question Id: {{question._id}}</span></h5> -->
+</form>
+</div>
+<div class="form-group row">
+		<label style="margin-left:70px" class="col-md-2 col-form-label">Post your answer here:</label>
+    <div class="col-10">
+		<textarea style="margin-left: 40px" class="col-md-2" rows="4" ng-model="answer"></textarea>
+</div>
+</div>
+<br>
+<div class="form-group row">
+			<label  style="margin-left:70px" class="col-md-2 col-form-label">Reference:</label>
+			<textarea style="margin-left: 40px" class="col-md-2" rows="4" ></textarea>
+</div>
+
+<div class="form-group row" >
+  <button class="btn btn-success col-md-0 col-md-offset-3" ng-click = 'createAnswerbyId(question.id)'>Submit</button>
+  <button class="btn btn-success col-md-0 col-md-offset-0" ng-click ='cancel()'>Cancel</button>
+</div>
+
+</div>
